@@ -33,7 +33,7 @@
          
          // display the custom buttons and the progress bar 
          document.getElementById("controls").style.display="block"; 
-        //  document.getElementById("progressbar").style.display="block"; 
+         document.getElementById("progressbar").style.display="block"; 
          
          // add event-handlers to control the video element 
          myVideo.addEventListener("timeupdate", reportProgress, false); 
@@ -129,7 +129,7 @@
         } 
           
         // update the progress bar 
-        /* function reportProgress() { 
+        function reportProgress() { 
           var barwidth = 500; var sliderwidth = 30; 
           // get current time 
           var time = Math.round(this.currentTime); 
@@ -139,7 +139,7 @@
           var position = barwidth * (time / duration); 
           if (isNaN(position)) return; 
           //update the progress bar 
-          document.getElementById("loadingprogress").style.width=position + "px";  */
+          document.getElementById("loadingprogress").style.width=position + "px";
           // update the position of the butterfly var 
           // butterfly = document.getElementById("butterfly"); 
           // if (position <= (barwidth - Math.round(sliderwidth / 2))) { 
@@ -148,7 +148,7 @@
           // else { 
           //   butterfly.style.left=barwidth - Math.round(sliderwidth / 2);
           // }
-        //}
+        }
       },
     });
   </script>
@@ -159,7 +159,7 @@
     </a-assets>
 
     <a-marker preset="hiro">
-      <a-entity geometry="primitive: box; width: 2.5; height: 0.1; depth: 1.40625;" multisrc="src2:#myVideo" position="0.5 0 -1.5"></a-entity>
+      <a-entity geometry="primitive: box; width: 2.5; height: 0.01; depth: 1.40625;" multisrc="src2:#myVideo" position="0.6 0 -1.4"></a-entity>
     </a-marker>
     <a-entity camera></a-entity>
 
